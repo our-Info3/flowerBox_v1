@@ -1,0 +1,53 @@
+<%= form_for(@adress) do |f| %>
+  <% if @adress.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@adress.errors.count, "error") %> prohibited this adress from being saved:</h2>
+
+      <ul>
+      <% @adress.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :billing_street %><br>
+    <%= f.text_field :billing_street %>
+  </div>
+  <div class="field">
+    <%= f.label :billing_house_number %><br>
+    <%= f.number_field :billing_house_number %>
+  </div>
+  <div class="field">
+    <%= f.label :billing_zipcode %><br>
+    <%= f.number_field :billing_zipcode %>
+  </div>
+  <div class="field">
+    <%= f.label :billing_city %><br>
+    <%= f.text_field :billing_city %>
+  </div>
+  <div class="field">
+    <%= f.label :shipping_street %><br>
+    <%= f.text_field :shipping_street %>
+  </div>
+  <div class="field">
+    <%= f.label :shipping_house_number %><br>
+    <%= f.number_field :shipping_house_number %>
+  </div>
+  <div class="field">
+    <%= f.label :shipping_zipcode %><br>
+    <%= f.number_field :shipping_zipcode %>
+  </div>
+  <div class="field">
+    <%= f.label :shipping_city %><br>
+    <%= f.text_field :shipping_city %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

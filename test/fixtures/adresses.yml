@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  billing_street: MyString
+  billing_house_number: 1
+  billing_zipcode: 1
+  billing_city: MyString
+  shipping_street: MyString
+  shipping_house_number: 1
+  shipping_zipcode: 1
+  shipping_city: MyString
+  user_id: 1
+
+two:
+  billing_street: MyString
+  billing_house_number: 1
+  billing_zipcode: 1
+  billing_city: MyString
+  shipping_street: MyString
+  shipping_house_number: 1
+  shipping_zipcode: 1
+  shipping_city: MyString
+  user_id: 1

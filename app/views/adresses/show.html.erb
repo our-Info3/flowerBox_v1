@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Billing street:</strong>
+  <%= @adress.billing_street %>
+</p>
+
+<p>
+  <strong>Billing house number:</strong>
+  <%= @adress.billing_house_number %>
+</p>
+
+<p>
+  <strong>Billing zipcode:</strong>
+  <%= @adress.billing_zipcode %>
+</p>
+
+<p>
+  <strong>Billing city:</strong>
+  <%= @adress.billing_city %>
+</p>
+
+<p>
+  <strong>Shipping street:</strong>
+  <%= @adress.shipping_street %>
+</p>
+
+<p>
+  <strong>Shipping house number:</strong>
+  <%= @adress.shipping_house_number %>
+</p>
+
+<p>
+  <strong>Shipping zipcode:</strong>
+  <%= @adress.shipping_zipcode %>
+</p>
+
+<p>
+  <strong>Shipping city:</strong>
+  <%= @adress.shipping_city %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @adress.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_adress_path(@adress) %> |
+<%= link_to 'Back', adresses_path %>
