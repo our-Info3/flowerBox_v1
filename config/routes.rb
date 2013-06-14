@@ -1,7 +1,13 @@
 FlowerBoxV1::Application.routes.draw do
-  resources :adresses
-
-  resources :users
+  root :users => 'users#index'
+  resources :flowers
+  resources :users do
+    resources :adresses
+    resources :flowerboxes do
+      resources :flowers
+    end
+  end
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

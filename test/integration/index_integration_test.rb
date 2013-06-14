@@ -16,7 +16,22 @@ class UserShowTest < ActionDispatch::IntegrationTest
     test "Testing elements of User/show" do
         visit user_path(@user1)
         assert page.has_content?("Name")
-        #save_and_open_page
         assert page.has_content?("F-strasse")
+    end
+end
+
+class UserEditTest < ActionDispatch::IntegrationTest
+    setup do
+        @user1= User.create!(name: "Uschi",email:"Uschi@Obermeyer.de")
+        @adress1= @user1.adresses.create!(billing_street:"F-strasse",billing_house_number:"2")    
+        @user2= User.create!(name: "Karla",email:"Karla@Kolumna.de")
+    end
+    test "Testing elements of User/edit" do
+        visit user_path(@user1)
+        click_on('Edit')
+        #save_and_open_page
+        assert page.has_content?("Name")
+        assert page.has_content?("billing_street"),"check your content"
+        
     end
 end
