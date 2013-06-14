@@ -14,18 +14,6 @@
   <strong>Password:</strong>
   <%= @user.password %>
 </p>
-    <% @adresses.each do |adress| %>
-
-        <p><strong>Billing_street:</strong><%= adress.billing_street %></p>
-        <p><strong>Billing_house_number:</strong><%= adress.billing_house_number %></p>
-        <p><strong>Billing_zipcode:</strong><%= adress.billing_zipcode %></p>
-        <p><strong>Billing_city:</strong><%= adress.billing_city %></p>
-        <p><strong>Shipping_street:</strong><%= adress.shipping_street %></p>
-        <p><strong>Shipping_house_number:</strong><%= adress.shipping_house_number %></p>
-        <p><strong>Shipping_zipcode:</strong><%= adress.shipping_zipcode %></p>
-        <p><strong>Shipping_city:</strong><%= adress.shipping_city %></p>
-
-    <% end %>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<%= link_to 'Back', users_path %> | <%= link_to 'Show Adresses', user_adresses_path(@user) %>

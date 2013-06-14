@@ -1,6 +1,6 @@
-<h1>Editing adress</h1>
+<h1>Editing adress for user <%= @user.id %></h1>
 
 <%= render :partial => 'form' %>
 
-<%= link_to 'Show', user_adress_path %> |
+<%= link_to 'Show', user_adress_path(@user,@adress) %> |
 <%= link_to 'Back', user_adress_path %>

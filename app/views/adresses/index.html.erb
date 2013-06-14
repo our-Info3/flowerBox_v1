@@ -30,14 +30,13 @@
         <td><%= adress.shipping_zipcode %></td>
         <td><%= adress.shipping_city %></td>
         <td><%= adress.user_id %></td>
-        <td><%= link_to 'Show', user_adress_path %></td>
-        <td><%= link_to 'Edit', edit_adress_path(adress) %></td>
-        <td><%= link_to 'Destroy', adress, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', user_adress_path(@user,adress) %></td>
+        <td><%= link_to 'Edit', edit_user_adress_path(@user,adress) %></td>
+        <td><%= link_to 'Destroy', user_adress_path(@user,adress), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Adress', new_adress_path %>
+<%= link_to 'New Adress', new_user_adress_path(@user) %>

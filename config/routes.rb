@@ -1,11 +1,11 @@
 FlowerBoxV1::Application.routes.draw do
-  root :users => 'users#index'
-  resources :flowers
+  #root :users => 'users#index'
+  #resources :flowers
   resources :users do
     resources :adresses
-    resources :flowerboxes do
-      resources :flowers
-    end
+    # resources :flowerboxes do
+    #   resources :flowers
+    # end
   end
   
 
