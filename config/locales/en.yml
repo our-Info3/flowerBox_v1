@@ -20,4 +20,10 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+ hello: "Hello world"
+ title: "Listing Users"
+ password: "Password"
+ show: "Show"
+ edit: "Edit"
+ destroy: "Destroy"
+ new: "New User"

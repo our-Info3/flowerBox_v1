@@ -1,0 +1,8 @@
+de:
+ hello: "Hallo world"
+ title: "Auflistung der User"
+ password: "Passwort"
+ show: "Anzeigen"
+ edit: "Bearbeiten"
+ destroy: "Löschen"
+ new: "Neuer User"

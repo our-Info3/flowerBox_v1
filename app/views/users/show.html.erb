@@ -1,19 +1,20 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <h5>Name:</h5>
   <%= @user.name %>
 </p>
 
 <p>
-  <strong>Email:</strong>
+  <h5>Email:</h5>
   <%= @user.email %>
 </p>
 
 <p>
-  <strong>Password:</strong>
+  <h5>Password:</h5>
   <%= @user.password %>
 </p>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %> | <%= link_to 'Show Adresses', user_adresses_path(@user) %>
+<div class = "btn"><%= link_to 'Edit', edit_user_path(@user) %></div>
+<div class = "btn"><%= link_to 'Back', users_path %></div>
+<div class = "btn"><%= link_to 'Show Adresses', user_adresses_path(@user) %></div>
