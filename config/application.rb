@@ -23,4 +23,3 @@ module FlowerBoxV1
   end
 end
 
-config.i18n.default_locale = :en

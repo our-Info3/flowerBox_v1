@@ -30,7 +30,14 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.0.1'
 
-  gem 'pg'
+group :development, :test do
+    gem 'sqlite3'
+end
+
+group :production do
+        gem 'thin'
+    gem 'pg'
+end
 
 gem 'heroku'
 
