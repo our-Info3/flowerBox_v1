@@ -101,7 +101,7 @@ GEM
       activesupport (= 4.0.0.rc1)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
-    rake (10.0.4)
+    rake (10.1.0)
     rdoc (3.12.2)
       json (~> 1.4)
     rest-client (1.6.7)
@@ -167,7 +167,7 @@ DEPENDENCIES
   pg
   rails (= 4.0.0.rc1)
   rails-i18n (~> 0.7.3)
-  rake
+  rake (~> 10.1.0)
   sass-rails (~> 4.0.0.rc1)
   sdoc
   sqlite3

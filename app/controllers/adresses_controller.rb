@@ -42,7 +42,7 @@ class AdressesController < ApplicationController
   # PATCH/PUT /adresses/1
   # PATCH/PUT /adresses/1.json
   def update
-
+    @adress.user_id = @user.id
     respond_to do |format|
       if @adress.update(adress_params)
         format.html { redirect_to user_adresses_path(@user), notice: 'Adress was successfully updated.' }

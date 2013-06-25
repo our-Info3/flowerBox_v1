@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  flower_price: 9.99
+  box_id: 1
+
+two:
+  name: MyString
+  flower_price: 9.99
+  box_id: 1

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  numberOfBoxes: 1
+  totalCosts: 9.99
+  user_id: 1
+
+two:
+  numberOfBoxes: 1
+  totalCosts: 9.99
+  user_id: 1

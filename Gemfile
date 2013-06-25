@@ -47,7 +47,7 @@ group :doc do
 end
 
 group :test do
-  gem 'rake' # for travis, see http://about.travis-ci.org/docs/user/languages/ruby/
+  gem 'rake', '~> 10.1.0' # for travis, see http://about.travis-ci.org/docs/user/languages/ruby/
   gem 'capybara'
   gem 'database_cleaner'
   gem 'launchy'

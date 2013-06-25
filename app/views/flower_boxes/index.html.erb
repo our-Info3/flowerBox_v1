@@ -1,0 +1,31 @@
+<h1>Listing flower_boxes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Price</th>
+      <th>Size</th>
+      <th>Color</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @flower_boxes.each do |flower_box| %>
+      <tr>
+        <td><%= flower_box.price %></td>
+        <td><%= flower_box.size %></td>
+        <td><%= flower_box.color %></td>
+        <td><%= link_to 'Show', flower_box %></td>
+        <td><%= link_to 'Edit', edit_flower_box_path(flower_box) %></td>
+        <td><%= link_to 'Destroy', flower_box, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Flower box', new_flower_box_path %>

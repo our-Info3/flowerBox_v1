@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<% @order.flower_boxes.each do |flowerbox|%>
+    <p>Price: <%= flowerbox.price %></p>
+    <p>Size: <%= flowerbox.size %></p>
+    <p>Color: <%= flowerbox.color %></p>
+    <hr>
+<%end%>
+
+<p> Total Costs <%= @order.calcPrice %> </p>
+    <hr>
+    <hr>
+<%= link_to 'Add Flower Box', new_flower_box_path(@order.id) %>
+
+<%= link_to 'Back', user_orders_path(@user) %>

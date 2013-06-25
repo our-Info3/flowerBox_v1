@@ -1,0 +1,29 @@
+<h1>Listing orders</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Numberofboxes&nbsp;</th>
+      <th>Totalcosts</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @orders.each do |order| %>
+      <tr>
+        <td><%= order.flower_boxes.count %></td>
+        <td><%= order.calcPrice %></td>
+        <td><%= link_to 'Show', user_order_path(@user,order) %></td>
+        <td><%= link_to 'Edit', edit_user_order_path(@user,order) %></td>
+        <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Order', new_user_order_path(@user) %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130531124216) do
+ActiveRecord::Schema.define(version: 20130625163920) do
 
   create_table "adresses", force: true do |t|
     t.string   "billing_street"
@@ -22,6 +22,31 @@ ActiveRecord::Schema.define(version: 20130531124216) do
     t.integer  "shipping_house_number"
     t.integer  "shipping_zipcode"
     t.string   "shipping_city"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "flower_boxes", force: true do |t|
+    t.decimal  "price"
+    t.integer  "size"
+    t.string   "color"
+    t.integer  "order_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "flowers", force: true do |t|
+    t.string   "name"
+    t.decimal  "flower_price"
+    t.integer  "flower_box_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "orders", force: true do |t|
+    t.integer  "numberOfBoxes"
+    t.decimal  "totalCosts"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
